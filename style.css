@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: #fff;
+  --poppins-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary-red) url("bg-intro-desktop.png");
+  font-size: 16px;
+  font-family: var(--poppins-font);
+}
+main {
+  width: 1440px;
+  max-width: 100%;
+}
+.container {
+  width: 78%;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin: 50px auto;
+}
+.description--text-box {
+  color: var(--white);
+  width: 50%;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.form-container {
+  width: 50%;
+}
+.form--headline {
+  padding: 18px 50px;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 1px rgba(0, 0, 0, 0.124);
+}
+.form--headline span {
+  font-weight: 600;
+}
+.form-box {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 7px;
+  box-shadow: 0 7px 1px rgba(0, 0, 0, 0.124);
+}
+input {
+  width: 100%;
+  padding: 18px 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+}
+input::placeholder {
+  font-weight: 600;
+}
+input:focus {
+  outline: 1px solid var(--accent-blue);
+}
+/* input:invalid {
+  background-image: url("icon-error.svg");
+  background-position: 95% center;
+  background-repeat: no-repeat;
+  border: 2px solid var(--primary-red);
+  outline: none;
+} */
+input[type="submit"] {
+  background-color: var(--primary-green);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4px 1px hsla(154, 93%, 35%, 0.815);
+  transition: 0.4s;
+}
+input[type="submit"]:hover {
+  background-color: hsla(154, 93%, 35%, 0.815);
+}
+.terms {
+  text-align: center;
+  font-size: 11px;
+  color: var(--grayish-blue);
+}
+.terms span {
+  color: var(--primary-red);
+  font-weight: 600;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("bg-intro-mobile.png");
+  }
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+  }
+  .description--text-box {
+    width: 100%;
+    text-align: center;
+  }
+  .description--text-box h1 {
+    font-size: 32px;
+  }
+  .description--text-box p {
+    font-size: 16px;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .form-box {
+    padding: 15px;
+  }
+}
