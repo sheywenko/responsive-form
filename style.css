@@ -103,27 +103,41 @@ input[type="submit"]:hover {
   font-weight: 600;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   body {
     background-image: url("bg-intro-mobile.png");
   }
   .container {
     flex-direction: column;
     width: 100%;
-    padding: 15px;
+    padding: 25px;
   }
   .description--text-box {
     width: 100%;
     text-align: center;
   }
   .description--text-box h1 {
+    font-size: 40px;
+  }
+  .description--text-box p {
+    font-size: 20px;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .form-box {
+    padding: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding: 15px;
+  }
+  .description--text-box h1 {
     font-size: 32px;
   }
   .description--text-box p {
     font-size: 16px;
-  }
-  .form-container {
-    width: 100%;
   }
   .form-box {
     padding: 15px;
